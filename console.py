@@ -7,6 +7,11 @@ import cmd
 import shlex
 from models.base_model import BaseModel
 from models.user import User
+from models.state import State
+from models.place import Place
+from models.amenity import Amenity
+from models.review import Review
+from models.city import City
 from models import storage
 
 
@@ -16,7 +21,8 @@ class HBNBCommand(cmd.Cmd):
     interpreter
     '''
     prompt = "(hbnb) "
-    valid_classes = ["BaseModel", "User"]
+    valid_classes = ["BaseModel", "User", "State",
+                     "Place", "Amenity", "Review", "City"]
 
     def emptyline(self):
         '''
